@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg4">
+    <LinearLayout android:orientation="vertical" android:layout_height="match_parent" android:layout_width="wrap_content"
+        android:layout_above="@+id/sb">
+
+
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/sb"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:max="200"
+        android:maxHeight="2dp"
+        android:minHeight="2dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="3dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="3dp"
+        android:layout_above="@+id/local_music_bottomlayout"/>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="70dp"
+       android:layout_alignParentBottom="true"
+       android:id="@+id/local_music_bottomlayout"
+       android:background="#33EEEEEE">
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:background="#9933FA"/>
+       <ImageView
+           android:layout_width="60dp"
+           android:layout_height="60dp"
+
+           android:layout_centerVertical="true"
+           android:background="@mipmap/icon_notification_default"
+           android:layout_marginLeft="10dp"
+           android:id="@+id/local_music_bottom_iv_icon"/>
+   <TextView
+       android:id="@+id/local_music_bottom_tv_song"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text=""
+       android:layout_toRightOf="@id/local_music_bottom_iv_icon"
+       android:layout_marginTop="10dp"
+       android:layout_marginLeft="10dp"
+       android:textSize="16sp"
+       android:textStyle="bold"/>
+   <TextView
+       android:id="@+id/local_music_bottom_tv_singer"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text=""
+       android:textSize="12sp"
+       android:layout_below="@id/local_music_bottom_tv_song"
+       android:layout_alignLeft="@id/local_music_bottom_tv_song"
+       android:layout_marginTop="10dp"/>
+
+   <ImageView
+       android:id="@+id/local_music_bottom_iv_next"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentRight="true"
+       android:layout_marginRight="1dp"
+       android:src="@mipmap/btn_audio_next_normal" />
+
+   <ImageView
+       android:id="@+id/local_music_bottom_iv_play"
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       android:layout_marginRight="-31dp"
+       android:layout_toLeftOf="@id/local_music_bottom_iv_next"
+       android:src="@mipmap/btn_audio_play_normal" />
+
+       <ImageView
+           android:id="@+id/local_music_bottom_iv_last"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="-30dp"
+           android:layout_toLeftOf="@id/local_music_bottom_iv_play"
+           android:src="@mipmap/btn_audio_pre_normal" />
+
+       <ImageView
+           android:id="@+id/settings"
+           android:layout_width="30dp"
+           android:layout_height="30dp"
+           android:layout_alignParentBottom="true"
+           android:layout_marginRight="143dp"
+           android:layout_marginBottom="19dp"
+           android:layout_toLeftOf="@id/local_music_bottom_iv_play"
+           app:srcCompat="@mipmap/setting" />
+   </RelativeLayout>
+
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/local_music_rv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/local_music_bottomlayout"
+    android:layout_marginBottom="30dp">
+
+</android.support.v7.widget.RecyclerView>
+</RelativeLayout>
